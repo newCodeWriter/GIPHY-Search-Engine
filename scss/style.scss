@@ -1,8 +1,9 @@
+//**Variables**
 $purple: #6600cc;
 $white: white; 
 $clear: transparent; 
 $width: 100%;
-
+//**Mixins**
 @mixin flexbox-row{
     display: -webkit-box;
     display: -moz-box;
@@ -26,7 +27,7 @@ $width: 100%;
     -ms-flex:  $values;
     flex:  $values;           
 }
-
+//**Navbar**
 html {
     box-sizing: border-box;
     font-family: 'Prata', serif;
@@ -43,6 +44,7 @@ nav{
     @include flexbox-row;
     background-color: $purple;
     width: $width;
+    margin-bottom: 4em;
     align-items: baseline;
     font-family: 'Prata', serif;
     .menu-btn{
@@ -58,32 +60,28 @@ nav{
         @include flex(0 1 80%);
         justify-content: flex-end;
         align-items: baseline;
-        margin: 0;
         #search-field{
             @include flexbox-row;
-        }
-        input{  
-            padding-top: 1%;
-            padding-bottom: 1%;
-            border-color: $white;
-            font-family: 'Prata', serif;
-        }
-        button{
-            margin-left: -1px;
-            margin-right: 25px;
-            padding: 1% 3%;
-            color: $white;
-            background-color:rgb(19, 18, 18);
-            border: 1px inset $white; 
-            font-family: 'Prata', serif;
-            cursor: pointer;
-        }
+        
+            input{  
+                border-color: $white;
+                font-family: 'Prata', serif;
+            }
+            button{
+                margin-left: -1px;
+                margin-right: 25px;
+                padding: 0.5rem 0.5rem;
+                color: $white;
+                background-color:rgb(19, 18, 18);
+                border: 1px inset $white; 
+                font-family: 'Prata', serif;
+                cursor: pointer;
+            }
+        } 
         ul{
             @include flexbox-row;
             color: $white;
             list-style: none;
-            margin: 0;
-            padding: 0;
             li{
                 a:hover{
                     background: rgb(19, 18, 18);
@@ -94,14 +92,14 @@ nav{
 }
 a{
     display: inline-block;
-    padding: 20px 15px;
+    padding: 1.7em 1em;
     color: $white;
     text-decoration: none;
 }
-
-@media (max-width: 320px), (min-width: 320px) and (max-width: 700px){
+//**Media Queries**
+@media (max-width: 320px), (min-width: 320px) and (max-width: 650px){
     nav{
-        flex-direction: column;
+        @include flexbox-mobile;
         align-items: flex-end;
         .menu-btn{
             display: block;
@@ -118,7 +116,7 @@ a{
             text-align: center;
         }
         #menu{
-            flex-direction: column;
+            @include flexbox-mobile;
             width: $width;
 
             #search-field{
@@ -130,8 +128,7 @@ a{
                     border: none;
                     background: $clear;
                     width: $width;
-                    padding-top: 20px;
-                    padding-bottom: 20px;
+                    padding: 1.3em 0;
                     margin: 0;
                 }
                 button:hover{
@@ -139,14 +136,13 @@ a{
                 }
             }
             ul{
-                flex-direction: column;
+                @include flexbox-mobile;
                 width: $width;
                 text-align: center;
                 li{
                     a{
                         width: $width;
-                        padding-top: 20px;
-                        padding-bottom: 20px;
+                        padding: 1.3em 0;
                     }
                 }
             }
