@@ -2,7 +2,7 @@ html {
   box-sizing: border-box;
   font-family: 'Prata', serif;
   font-size: 0.85em;
-  background: #131212;
+  background: #5f5c5c;
 }
 
 *, *:before, *:after {
@@ -46,6 +46,7 @@ nav #menu #search-field {
 nav #menu #search-field input {
   border-color: white;
   font-family: 'Prata', serif;
+  padding-left: 0.5rem;
 }
 
 nav #menu #search-field button {
@@ -77,10 +78,61 @@ a {
   text-decoration: none;
 }
 
-@media (max-width: 320px), (min-width: 320px) and (max-width: 650px) {
+#gif-criteria {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 40%;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+#gif-criteria #gif-search, #gif-criteria #gif-items {
+  flex: 0 1 50%;
+  text-align: center;
+}
+
+#gif-criteria #gif-search div, #gif-criteria #gif-items div {
+  padding-bottom: 0.65rem;
+}
+
+#gif-criteria #gif-search button, #gif-criteria #gif-items button {
+  width: 70%;
+  padding: 0.45rem 0.25rem;
+  border: 1px outset #6600cc;
+  border-radius: 5px;
+  font-family: 'Prata', serif;
+  color: black;
+  background-color: white;
+}
+
+.mobile-search {
+  margin: 0 auto;
+  margin-bottom: 3em;
+}
+
+.mobile-input {
+  font-size: 0.85em;
+  font-family: 'Prata', serif;
+  border: 2px solid white;
+  padding: 0.5rem 0.5rem;
+}
+
+.mobile-btn {
+  margin-left: -4px;
+  padding: 0.5rem 1rem;
+  padding-top: 0.43rem;
+  color: white;
+  background-color: black;
+  border: 1px solid white;
+  font-family: 'Prata', serif;
+  cursor: pointer;
+}
+
+@media (max-width: 320px), (min-width: 320px) and (max-width: 550px) {
   nav {
     display: flex;
-    flex-direction: column;
+    flex-flow: column nowrap;
     align-items: flex-end;
   }
   nav .menu-btn {
@@ -99,7 +151,7 @@ a {
   }
   nav #menu {
     display: flex;
-    flex-direction: column;
+    flex-flow: column nowrap;
     width: 100%;
   }
   nav #menu #search-field {
@@ -120,13 +172,28 @@ a {
   }
   nav #menu ul {
     display: flex;
-    flex-direction: column;
+    flex-flow: column nowrap;
     width: 100%;
     text-align: center;
   }
   nav #menu ul li a {
     width: 100%;
     padding: 1.3em 0;
+  }
+  #gif-criteria {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 65%;
+  }
+  #gif-criteria #gif-search, #gif-criteria #gif-items {
+    margin-bottom: 1.5rem;
+  }
+  #gif-criteria #gif-search button, #gif-criteria #gif-items button {
+    padding: 0.65rem 0;
+    width: 100%;
+  }
+  .mobile-search {
+    width: 65%;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -18,7 +18,7 @@ $width: 100%;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-    flex-direction: column;
+    flex-flow: column nowrap;
 }
 @mixin flex($values) {
     -webkit-box-flex: $values;
@@ -32,7 +32,7 @@ html {
     box-sizing: border-box;
     font-family: 'Prata', serif;
     font-size: 0.85em;
-    background: rgb(19, 18, 18);
+    background: rgb(95, 92, 92);
   }
   *, *:before, *:after {
     box-sizing: inherit;
@@ -66,6 +66,7 @@ nav{
             input{  
                 border-color: $white;
                 font-family: 'Prata', serif;
+                padding-left: 0.5rem;
             }
             button{
                 margin-left: -1px;
@@ -96,8 +97,54 @@ a{
     color: $white;
     text-decoration: none;
 }
+#gif-criteria{
+    @include flexbox-row;
+    width: 40%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    color: $white;
+    #gif-search{
+        @include flex(0 1 50%);
+        text-align: center;
+        div{
+            padding-bottom: 0.65rem;
+        }
+        button{
+            width: 70%;
+            padding: 0.45rem 0.25rem;
+            border: 1px outset $purple;
+            border-radius: 5px;
+            font-family: 'Prata', serif;
+            color: black;
+            background-color: $white;
+        }
+    }
+    #gif-items{
+        @extend #gif-search;
+    }
+}
+.mobile-search{
+    margin: 0 auto;
+    margin-bottom: 3em;
+}
+.mobile-input{
+    font-size: 0.85em;
+    font-family: 'Prata', serif;
+    border: 2px solid $white;
+    padding: 0.5rem 0.5rem;
+}
+.mobile-btn{
+    margin-left: -4px;
+    padding: 0.5rem 1rem;
+    padding-top: 0.43rem;
+    color: $white;
+    background-color: black;
+    border: 1px solid $white; 
+    font-family: 'Prata', serif;
+    cursor: pointer;
+}
 //**Media Queries**
-@media (max-width: 320px), (min-width: 320px) and (max-width: 650px){
+@media (max-width: 320px), (min-width: 320px) and (max-width: 550px){
     nav{
         @include flexbox-mobile;
         align-items: flex-end;
@@ -147,6 +194,20 @@ a{
                 }
             }
         }
+    }
+    #gif-criteria{
+        @include flexbox-mobile;
+        width: 65%;
+        #gif-search{
+            margin-bottom: 1.5rem;
+            button{
+                padding: 0.65rem 0;
+                width: $width;
+            }
+        }
+    }
+    .mobile-search{
+        width: 65%;
     }
 }
 
