@@ -2,7 +2,9 @@ html {
   box-sizing: border-box;
   font-family: 'Prata', serif;
   font-size: 0.85em;
-  background: #5f5c5c;
+  background: #383737;
+  position: relative;
+  min-height: 100%;
 }
 
 *, *:before, *:after {
@@ -13,7 +15,7 @@ html {
 
 nav {
   display: flex;
-  flex-flow: row nowrap;
+  flex-direction: row;
   background-color: #6600cc;
   width: 100%;
   margin-bottom: 4em;
@@ -32,7 +34,7 @@ nav #site-name {
 
 nav #menu {
   display: flex;
-  flex-flow: row nowrap;
+  flex-direction: row;
   flex: 0 1 80%;
   justify-content: flex-end;
   align-items: baseline;
@@ -40,7 +42,7 @@ nav #menu {
 
 nav #menu #search-field {
   display: flex;
-  flex-flow: row nowrap;
+  flex-direction: row;
 }
 
 nav #menu #search-field input {
@@ -62,7 +64,7 @@ nav #menu #search-field button {
 
 nav #menu ul {
   display: flex;
-  flex-flow: row nowrap;
+  flex-direction: row;
   color: white;
   list-style: none;
 }
@@ -73,17 +75,17 @@ nav #menu ul li a:hover {
 
 a {
   display: inline-block;
-  padding: 1.7em 1em;
+  padding: 2em 1em;
   color: white;
   text-decoration: none;
 }
 
 #gif-criteria {
   display: flex;
-  flex-flow: row nowrap;
-  width: 40%;
+  flex-direction: row;
+  width: 40em;
   margin: 0 auto;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
   color: white;
 }
 
@@ -97,13 +99,41 @@ a {
 }
 
 #gif-criteria #gif-search button, #gif-criteria #gif-items button {
-  width: 70%;
+  width: 80%;
   padding: 0.45rem 0.25rem;
-  border: 1px outset #6600cc;
+  border: 2px outset #6600cc;
   border-radius: 5px;
   font-family: 'Prata', serif;
   color: black;
   background-color: white;
+}
+
+.insert-gifs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 75%;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+.insert-gifs img {
+  flex: 0 1 20%;
+  max-width: 20%;
+  padding: 0.75rem;
+}
+
+footer {
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #6600cc;
+  font-family: 'Prata', serif;
+  margin-top: 3rem;
+  padding: 1.2rem 0;
+  font-size: 0.25rem;
+  color: white;
 }
 
 .mobile-search {
@@ -129,7 +159,7 @@ a {
   cursor: pointer;
 }
 
-@media (max-width: 320px), (min-width: 320px) and (max-width: 550px) {
+@media (max-width: 320px), (min-width: 320px) and (max-width: 571px) {
   nav {
     display: flex;
     flex-flow: column nowrap;
@@ -193,7 +223,20 @@ a {
     width: 100%;
   }
   .mobile-search {
-    width: 65%;
+    width: 100%;
+  }
+  .insert-gifs {
+    display: flex;
+    flex-flow: column nowrap;
+    flex-wrap: wrap;
+    width: 75%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+  }
+  .insert-gifs img {
+    flex: 0 1 100%;
+    max-width: 100%;
+    padding: 0.75rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
