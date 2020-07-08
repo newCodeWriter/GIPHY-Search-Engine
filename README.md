@@ -6,7 +6,7 @@ The site is a Giphy search engine that allows the user to search a keyword and r
 Functionality
 The user clicks on 'Search' in the navigation menu at the top to open the search box. Once the search box is open, the user can enter a keyword (or keywords) into the search box and click the search button next to the search box to search and retrieve gifs based on that keyword.
 When the user searches a word, the keyword and the number of gifs yielded from the search will appear as buttons above the gifs generated. 
-The user is able to click on a gif and be directed to the source of the gif. If the gif has no source, the image cannot be clicked.
+The user is able to click on a gif and be directed to the source of the gif in a new page tab. If the gif has no source, the image cannot be clicked.
 In mobile view, the user can toggle the visibility of the menu items.
 When the user clicks the search button with an empty search box, the search box will focus with no changes to the page. 
 
