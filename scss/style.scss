@@ -1,5 +1,5 @@
 //**Variables**
-$purple: #6600cc;
+$purple: rgb(72, 5, 117);
 $white: white; 
 $clear: transparent; 
 $width: 100%;
@@ -32,14 +32,17 @@ html {
     box-sizing: border-box;
     font-family: 'Prata', serif;
     font-size: 0.85em;
-    background: rgb(56, 55, 55);
-    position: relative;
-    min-height: $width;
+    background: rgb(46, 45, 45);
   }
   *, *:before, *:after {
     box-sizing: inherit;
     margin: 0;
     padding: 0;
+}
+body{
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 53.63px;
 }
 nav{
     @include flexbox-row;
@@ -53,7 +56,14 @@ nav{
     }
     #site-name{
         color: $white;
+        font-size: 1.75rem;
         @include flex(0 1 20%);
+        a{
+            display: inline-block;
+            padding-left: 1em;
+            color: $white;
+            text-decoration: none;
+        }
     }
 
     #menu{
@@ -65,6 +75,7 @@ nav{
             @include flexbox-row;
         
             input{  
+                display: none;
                 border-color: $white;
                 font-family: 'Prata', serif;
                 padding-left: 0.5rem;
@@ -85,18 +96,18 @@ nav{
             color: $white;
             list-style: none;
             li{
+                a{
+                    display: inline-block;
+                    padding: 2.2em 1em;
+                    color: $white;
+                    text-decoration: none;
+                }
                 a:hover{
                     background: rgb(19, 18, 18);
                 }
             }
         }
     }
-}
-a{
-    display: inline-block;
-    padding: 2em 1em;
-    color: $white;
-    text-decoration: none;
 }
 //**GIF Section**
 #gif-criteria{
@@ -129,24 +140,30 @@ a{
     @include flexbox-row;
     flex-wrap: wrap;
     //justify-content: space-around;
+    //min-height: $width;
     width: 75%;
     margin: 0 auto;
     margin-bottom: 2rem;
-    img{
-        @include flex(0 1 20%);
-        max-width: 20%;
-        padding: 0.75rem;
+    a{
+        @include flexbox-row;
+        flex-wrap: wrap;
+        width: 20%;
+        img{
+            @include flex(0 1 $width);
+            max-width: $width;
+            padding: 0.75rem;
+        }
     }
 }
 //**Footer**
 footer{
-    position: sticky;
+    position: absolute;
     bottom: 0;
     width: $width;
     text-align: center;
     background-color: $purple;
     font-family: 'Prata', serif;
-    margin-top: 3rem;
+    //margin-top: 3rem;
     padding: 1.2rem 0;
     font-size: 0.25rem;
     color: $white;
@@ -242,14 +259,20 @@ footer{
     .insert-gifs{
         @include flexbox-mobile;
         flex-wrap: wrap;
-        width: 75%;
+        width: 65%;
         margin: 0 auto;
         margin-bottom: 2rem;
-        img{
-            @include flex(0 1 $width);
-            max-width: $width;
-            padding: 0.75rem;
+        a{
+            @include flexbox-mobile;
+            flex-wrap: wrap;
+            width: $width;
+            img{
+                @include flex(0 1 $width);
+                max-width: $width;
+                padding: 0.75rem;
+            }
         }
+
     }
 }
 

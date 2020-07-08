@@ -2,9 +2,7 @@ html {
   box-sizing: border-box;
   font-family: 'Prata', serif;
   font-size: 0.85em;
-  background: #383737;
-  position: relative;
-  min-height: 100%;
+  background: #2e2d2d;
 }
 
 *, *:before, *:after {
@@ -13,10 +11,16 @@ html {
   padding: 0;
 }
 
+body {
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 53.63px;
+}
+
 nav {
   display: flex;
   flex-direction: row;
-  background-color: #6600cc;
+  background-color: #480575;
   width: 100%;
   margin-bottom: 4em;
   align-items: baseline;
@@ -29,7 +33,15 @@ nav .menu-btn {
 
 nav #site-name {
   color: white;
+  font-size: 1.75rem;
   flex: 0 1 20%;
+}
+
+nav #site-name a {
+  display: inline-block;
+  padding-left: 1em;
+  color: white;
+  text-decoration: none;
 }
 
 nav #menu {
@@ -46,6 +58,7 @@ nav #menu #search-field {
 }
 
 nav #menu #search-field input {
+  display: none;
   border-color: white;
   font-family: 'Prata', serif;
   padding-left: 0.5rem;
@@ -69,15 +82,15 @@ nav #menu ul {
   list-style: none;
 }
 
-nav #menu ul li a:hover {
-  background: #131212;
-}
-
-a {
+nav #menu ul li a {
   display: inline-block;
-  padding: 2em 1em;
+  padding: 2.2em 1em;
   color: white;
   text-decoration: none;
+}
+
+nav #menu ul li a:hover {
+  background: #131212;
 }
 
 #gif-criteria {
@@ -101,7 +114,7 @@ a {
 #gif-criteria #gif-search button, #gif-criteria #gif-items button {
   width: 80%;
   padding: 0.45rem 0.25rem;
-  border: 2px outset #6600cc;
+  border: 2px outset #480575;
   border-radius: 5px;
   font-family: 'Prata', serif;
   color: black;
@@ -117,20 +130,26 @@ a {
   margin-bottom: 2rem;
 }
 
-.insert-gifs img {
-  flex: 0 1 20%;
-  max-width: 20%;
+.insert-gifs a {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 20%;
+}
+
+.insert-gifs a img {
+  flex: 0 1 100%;
+  max-width: 100%;
   padding: 0.75rem;
 }
 
 footer {
-  position: sticky;
+  position: absolute;
   bottom: 0;
   width: 100%;
   text-align: center;
-  background-color: #6600cc;
+  background-color: #480575;
   font-family: 'Prata', serif;
-  margin-top: 3rem;
   padding: 1.2rem 0;
   font-size: 0.25rem;
   color: white;
@@ -229,11 +248,17 @@ footer {
     display: flex;
     flex-flow: column nowrap;
     flex-wrap: wrap;
-    width: 75%;
+    width: 65%;
     margin: 0 auto;
     margin-bottom: 2rem;
   }
-  .insert-gifs img {
+  .insert-gifs a {
+    display: flex;
+    flex-flow: column nowrap;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .insert-gifs a img {
     flex: 0 1 100%;
     max-width: 100%;
     padding: 0.75rem;
