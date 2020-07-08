@@ -30,7 +30,6 @@ $(function(){
             $('.mobile-search > input').removeClass('search-input').addClass('mobile-input');
             $('.mobile-search > button').addClass('mobile-btn');
             $('.mobile-btn').text('').append('<i class="fas fa-search"></i>');
-            $('.mobile-search').css('text-align', 'center');
         }
     })
 
@@ -55,7 +54,7 @@ $(function(){
                 $('#gif-search-btn').text(userInput);
                 $.ajax({
                     url: `https://api.giphy.com/v1/gifs/search?api_key=sL5xWiHQ5a6PSB0LoE6A6t2yovo19jxp&q=${userInput}&limit=30`,
-                    success: function(){$('.new-img').remove();}
+                    success: function(){$('.source-link').remove();}
                 }).done(function(res){
                     var gifs = res.data; 
                     if(gifs.length == ""){
@@ -83,7 +82,7 @@ $(function(){
         else{
             var userInput = $('.mobile-input').val();
             $('#gif-search-btn').text(userInput);
-            $('.new-img').remove(); 
+            $('.source-link').remove(); 
             $.ajax({
                 url: `https://api.giphy.com/v1/gifs/search?api_key=sL5xWiHQ5a6PSB0LoE6A6t2yovo19jxp&q=${userInput}&limit=30`
             }).done(function(res){
@@ -103,5 +102,8 @@ $(function(){
                 }   
             }) 
         }
+    })
+    $('.insert-gifs').delegate("a[href='']", "mouseover mouseenter", function(){
+        $(".insert-gifs > a[href='']").removeAttr('href');
     })
 })
