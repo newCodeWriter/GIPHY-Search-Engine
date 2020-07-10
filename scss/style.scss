@@ -137,6 +137,13 @@ nav{
         button{
             border: 1px outset $purple;
         }
+        select{
+            width: 80%;
+            padding: 0.45rem 0.25rem;
+            border-radius: 7px;
+            text-indent: 6.5em;
+            font-family: 'Prata', serif;
+        }
     }
 }
 .insert-gifs{
@@ -247,12 +254,17 @@ footer{
     }
     #gif-criteria{
         @include flexbox-mobile;
-        width: 65%;
+        width: 20em;
+        margin: 0 auto;
         #gif-search{
             margin-bottom: 1.5rem;
             button{
                 padding: 0.65rem 0;
-                width: $width;
+            }
+        }
+        #gif-items{
+            select{
+                padding: 0.65rem 0;
             }
         }
     }
