@@ -27,4 +27,4 @@ Ideas for improvement
 
 -The same search gives a random selection of images each time it is searched. For instance, if I search the word "yellow" three times, I expect the search to yield a different set of images each time the word is searched. 
 -Being able to search the GIPHY API for all gifs and being able to display a certain amount of images per page.
--Allowing the user to select how many images are displayed per page or how many images the search should yield.
+-Allowing the user to select how many images are displayed per page.
