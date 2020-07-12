@@ -1,5 +1,5 @@
 $(function(){
-    var mobSearch = $('#search-field').clone().addClass('mobile-search');
+    var mobSearch = $('#search-field').clone().addClass('mobile-search').removeAttr('id');
     
     function aangGifs(){   
         var input = 'aang avatar';
@@ -27,7 +27,7 @@ $(function(){
     $('.search-btn').click(function(){
         if($(window).width() < 571){
             $('nav').after(mobSearch);
-            $('.mobile-search > input').removeClass('search-input').addClass('mobile-input');
+            $('.mobile-search > input').removeClass('search-input').addClass('mobile-input').attr('size', 22);
             $('.mobile-search > button').addClass('mobile-btn');
             $('.mobile-btn').text('').append('<i class="fas fa-search"></i>');
         }
@@ -51,10 +51,9 @@ $(function(){
             }
             else{
                 var userInput = $('.search-input').val();
-                var gifCount = $('select').val();
                 $('#gif-search-btn').text(userInput);
                 $.ajax({
-                    url: `https://api.giphy.com/v1/gifs/search?api_key=sL5xWiHQ5a6PSB0LoE6A6t2yovo19jxp&q=${userInput}&limit=${gifCount}`,
+                    url: `https://api.giphy.com/v1/gifs/search?api_key=sL5xWiHQ5a6PSB0LoE6A6t2yovo19jxp&q=${userInput}&limit=30`,
                     success: function(){$('.source-link').remove();}
                 }).done(function(res){
                     var gifs = res.data; 
@@ -82,11 +81,10 @@ $(function(){
         }
         else{
             var userInput = $('.mobile-input').val();
-            var gifCount = $('select').val();
             $('#gif-search-btn').text(userInput);
             $('.source-link').remove(); 
             $.ajax({
-                url: `https://api.giphy.com/v1/gifs/search?api_key=sL5xWiHQ5a6PSB0LoE6A6t2yovo19jxp&q=${userInput}&limit=${gifCount}`
+                url: `https://api.giphy.com/v1/gifs/search?api_key=sL5xWiHQ5a6PSB0LoE6A6t2yovo19jxp&q=${userInput}&limit=30`
             }).done(function(res){
                 var gifs = res.data;  
                 if(gifs.length == ""){
