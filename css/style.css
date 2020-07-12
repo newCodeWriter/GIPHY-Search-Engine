@@ -125,14 +125,6 @@ nav #menu ul li a:hover {
   border: 1px outset #480575;
 }
 
-#gif-criteria #gif-items select {
-  width: 80%;
-  padding: 0.45rem 0.25rem;
-  border-radius: 7px;
-  text-indent: 6.5em;
-  font-family: 'Prata', serif;
-}
-
 .insert-gifs {
   display: flex;
   flex-direction: row;
@@ -254,11 +246,8 @@ footer {
   #gif-criteria #gif-search button, #gif-criteria #gif-items button {
     padding: 0.65rem 0;
   }
-  #gif-criteria #gif-items select {
-    padding: 0.65rem 0;
-  }
   .mobile-search {
-    width: 100%;
+    width: 20em;
   }
   .insert-gifs {
     display: flex;
