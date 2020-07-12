@@ -149,8 +149,6 @@ nav{
 .insert-gifs{
     @include flexbox-row;
     flex-wrap: wrap;
-    //justify-content: space-around;
-    //min-height: $width;
     width: 75%;
     margin: 0 auto;
     margin-bottom: 2rem;
@@ -173,7 +171,6 @@ footer{
     text-align: center;
     background-color: $purple;
     font-family: 'Prata', serif;
-    //margin-top: 3rem;
     padding: 1.2rem 0;
     font-size: 0.25rem;
     color: $white;
