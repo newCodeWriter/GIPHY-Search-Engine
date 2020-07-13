@@ -63,11 +63,11 @@ $(function(){
                     } 
                     else{
                         $.each(gifs, function(i, e){
-                        var img = e.images.original.url;
-                        var source = e.source; 
-                        $('.insert-gifs').append(`<a href="${source}" target="_blank" class="source-link"><img src="${img}" class="new-img" alt="a gif"/></a>`);
-                        $('.search-input').val('');
-                        $('#gif-items-btn').text(gifs.length);
+                            var img = e.images.original.url;
+                            var source = e.source; 
+                            $('.insert-gifs').append(`<a href="${source}" target="_blank" class="source-link"><img src="${img}" class="new-img" alt="a gif"/></a>`);
+                            $('.search-input').val('');
+                            $('#gif-items-btn').text(gifs.length);
                         })
                     }  
                 })
@@ -93,11 +93,11 @@ $(function(){
                 }
                 else{
                     $.each(gifs, function(i, e){
-                    var img = e.images.original.url;
-                    var source = e.source; 
-                    $('.insert-gifs').append(`<a href="${source}" target="_blank" class="source-link"><img src="${img}" class="new-img" alt="a gif"/></a>`);
-                    $('.mobile-input').val('');
-                    $('#gif-items-btn').text(gifs.length);
+                        var img = e.images.original.url;
+                        var source = e.source; 
+                        $('.insert-gifs').append(`<a href="${source}" target="_blank" class="source-link"><img src="${img}" class="new-img" alt="a gif"/></a>`);
+                        $('.mobile-input').val('');
+                        $('#gif-items-btn').text(gifs.length);
                     })
                 }   
             }) 
