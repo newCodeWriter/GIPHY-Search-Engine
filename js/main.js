@@ -74,6 +74,35 @@ $(function(){
             }
         }
     })
+
+    $('body').delegate('.mobile-search > .mobile-btn', 'click', function(){
+        if($('.mobile-input').val() == ''){
+            $('.mobile-input').focus();
+        }
+        else{
+            var userInput = $('.mobile-input').val();
+            $('#gif-search-btn').text(userInput);
+            $('.source-link').remove(); 
+            $.ajax({
+                url: `https://api.giphy.com/v1/gifs/search?api_key=sL5xWiHQ5a6PSB0LoE6A6t2yovo19jxp&q=${userInput}&limit=30`
+            }).done(function(res){
+                var gifs = res.data;  
+                if(gifs.length == ""){
+                    $('#gif-items-btn').text(0);
+                    $('.mobile-input').val('');
+                }
+                else{
+                    $.each(gifs, function(i, e){
+                        var img = e.images.original.url;
+                        var source = e.source; 
+                        $('.insert-gifs').append(`<a href="${source}" target="_blank" class="source-link"><img src="${img}" class="new-img" alt="a gif"/></a>`);
+                        $('.mobile-input').val('');
+                        $('#gif-items-btn').text(gifs.length);
+                    })
+                }   
+            }) 
+        }
+    })
     $('.insert-gifs').delegate("a[href='']", "mouseover mouseenter", function(){
         $(".insert-gifs > a[href='']").removeAttr('href');
     })
