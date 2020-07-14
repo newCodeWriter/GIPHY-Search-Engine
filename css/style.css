@@ -145,6 +145,7 @@ nav #menu ul li a:hover {
   flex: 0 1 100%;
   max-width: 100%;
   padding: 0.75rem;
+  max-height: 300px;
 }
 
 footer {
@@ -267,6 +268,7 @@ footer {
     flex: 0 1 100%;
     max-width: 100%;
     padding: 0.75rem;
+    max-height: 200px;
   }
 }
 /*# sourceMappingURL=style.css.map */
