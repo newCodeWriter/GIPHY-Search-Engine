@@ -2,16 +2,15 @@
 
 Overview/Description
 
-The site is a Giphy search engine that allows the user to search a keyword and has the option to select 25, 30, 50 or 75 images (or gifs) based on that keyword.
+The site is a Giphy search engine that allows the user to enter a keyword and search gifs based on that keyword.
 
 Functionality
 
 The user clicks on 'Search' in the navigation menu at the top to open the search box. Once the search box is open, the user can enter a keyword (or keywords) into the search box and click the search button next to the search box to search and retrieve gifs based on that keyword.
-When the user searches a word, the keyword and the number of gifs yielded from the search will appear as buttons above the gifs generated. 
-The user is able to click on a gif and be directed to the source of the gif in a new page tab. If the gif has no source, the image cannot be clicked.
-The user also has the option (25, 30, 50 or 75) to select how many gifs should be returned from the search. 
+When the user searches a word, the keyword and the number of gifs yielded from the search will appear as (disabled) buttons above the gifs yielded from the search. 
+The user is able to click on a gif and be directed to the source of the gif in a new page tab. If the gif has no source, the href attribute is removed and the image cannot be clicked.
 In mobile view, the user can toggle the visibility of the menu items.
-When the user clicks the search button with an empty search box, the search box will focus with no changes to the page. 
+When the user clicks the search button with an empty search box, the search box will focus with no changes to the page. This ensures that the user knows that they have to enter something in order to search.  
 
 Technologies Used
 
