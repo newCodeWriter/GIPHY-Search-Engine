@@ -93,6 +93,10 @@ nav #menu ul li a:hover {
   background: #131212;
 }
 
+.mobile-search {
+  display: none;
+}
+
 #gif-criteria {
   display: flex;
   flex-direction: row;
@@ -145,7 +149,7 @@ nav #menu ul li a:hover {
   flex: 0 1 100%;
   max-width: 100%;
   padding: 0.75rem;
-  max-height: 300px;
+  max-height: 250px;
 }
 
 footer {
@@ -158,30 +162,6 @@ footer {
   padding: 1.2rem 0;
   font-size: 0.25rem;
   color: white;
-}
-
-.mobile-search {
-  margin: 0 auto;
-  margin-bottom: 3em;
-  text-align: center;
-}
-
-.mobile-input {
-  font-size: 0.85em;
-  font-family: 'Prata', serif;
-  border: 2px solid white;
-  padding: 0.5rem 0.5rem;
-}
-
-.mobile-btn {
-  margin-left: -4px;
-  padding: 0.5rem 1rem;
-  padding-top: 0.43rem;
-  color: white;
-  background-color: black;
-  border: 1px solid white;
-  font-family: 'Prata', serif;
-  cursor: pointer;
 }
 
 @media (max-width: 320px), (min-width: 320px) and (max-width: 571px) {
@@ -248,7 +228,25 @@ footer {
     padding: 0.65rem 0;
   }
   .mobile-search {
-    width: 20em;
+    margin: 0 auto;
+    margin-bottom: 3em;
+    text-align: center;
+  }
+  .mobile-search input {
+    font-size: 0.85em;
+    font-family: 'Prata', serif;
+    border: 2px solid white;
+    padding: 0.5rem 0.5rem;
+  }
+  .mobile-search button {
+    margin-left: -4px;
+    padding: 0.5rem 1rem;
+    padding-top: 0.43rem;
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+    font-family: 'Prata', serif;
+    cursor: pointer;
   }
   .insert-gifs {
     display: flex;

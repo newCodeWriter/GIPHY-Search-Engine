@@ -109,6 +109,10 @@ nav{
         }
     }
 }
+//**Mobile Search**
+.mobile-search{
+    display: none;
+}
 //**GIF Section**
 #gif-criteria{
     @include flexbox-row;
@@ -153,7 +157,7 @@ nav{
             @include flex(0 1 $width);
             max-width: $width;
             padding: 0.75rem;
-            max-height: 300px;
+            max-height: 250px;
         }
     }
 }
@@ -168,28 +172,6 @@ footer{
     padding: 1.2rem 0;
     font-size: 0.25rem;
     color: $white;
-}
-//**Mobile View**
-.mobile-search{
-    margin: 0 auto;
-    margin-bottom: 3em;
-    text-align: center;
-}
-.mobile-input{
-    font-size: 0.85em;
-    font-family: 'Prata', serif;
-    border: 2px solid $white;
-    padding: 0.5rem 0.5rem;
-}
-.mobile-btn{
-    margin-left: -4px;
-    padding: 0.5rem 1rem;
-    padding-top: 0.43rem;
-    color: $white;
-    background-color: black;
-    border: 1px solid $white; 
-    font-family: 'Prata', serif;
-    cursor: pointer;
 }
 //**Media Queries**
 @media (max-width: 320px), (min-width: 320px) and (max-width: 571px){
@@ -255,7 +237,25 @@ footer{
         }
     }
     .mobile-search{
-        width: 20em;
+        margin: 0 auto;
+        margin-bottom: 3em;
+        text-align: center;
+        input{
+            font-size: 0.85em;
+            font-family: 'Prata', serif;
+            border: 2px solid $white;
+            padding: 0.5rem 0.5rem;
+        }
+        button{
+            margin-left: -4px;
+            padding: 0.5rem 1rem;
+            padding-top: 0.43rem;
+            color: $white;
+            background-color: black;
+            border: 1px solid $white; 
+            font-family: 'Prata', serif;
+            cursor: pointer;
+        }
     }
     .insert-gifs{
         @include flexbox-mobile;
