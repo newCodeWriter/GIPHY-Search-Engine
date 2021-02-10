@@ -1,5 +1,10 @@
 # Project_02 - Marshay Brown
 
+npm init
+
+npm i eslint --save-dev
+./node_modules/.bin/eslint --init
+
 Overview/Description
 
 The site is a Giphy search engine that allows the user to enter a keyword and search gifs based on that keyword.
