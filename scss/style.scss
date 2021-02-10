@@ -1,5 +1,5 @@
 //**Variables**
-$purple: rgb(72, 5, 117);
+$black: black;
 $white: white; 
 $clear: transparent; 
 $width: 100%;
@@ -46,7 +46,7 @@ body{
 }
 nav{
     @include flexbox-row;
-    background-color: $purple;
+    background-color: $black;
     width: $width;
     margin-bottom: 4em;
     align-items: baseline;
@@ -75,7 +75,6 @@ nav{
             @include flexbox-row;
         
             input{  
-                display: none;
                 border-color: $white;
                 font-family: 'Prata', serif;
                 padding-left: 0.5rem;
@@ -103,45 +102,27 @@ nav{
                     text-decoration: none;
                 }
                 a:hover{
-                    background: rgb(19, 18, 18);
+                    background: rgb(71, 71, 71);
                 }
             }
         }
     }
 }
-//**Mobile Search**
-.mobile-search{
-    display: none;
-}
 //**GIF Section**
 #gif-criteria{
-    @include flexbox-row;
-    width: 40em;
-    margin: 0 auto;
-    margin-bottom: 2.5rem;
     color: $white;
-    #gif-search{
-        @include flex(0 1 50%);
-        text-align: center;
-        div{
-            padding-bottom: 0.65rem;
-        }
-        button{
-            width: 80%;
-            padding: 0.45rem 0.25rem;
-            border: 3px outset rgb(181, 109, 223);
-            border-radius: 7px;
-            font-family: 'Prata', serif;
-            color: black;
-            background-color: $white;
-        }
-    }
-    #gif-items{
-        @extend #gif-search;
-        button{
-            border: 1px outset $purple;
-        }
-    }
+	    width: 75%;
+    	margin: 0 auto;
+		padding: 0.75rem;
+	div{
+		display: inline-block;
+		font-size: 45px;
+		font-weight: bolder;
+	}
+	#gif-items{
+		color:rgb(155, 153, 153);
+		font-size: medium;
+	}
 }
 .insert-gifs{
     @include flexbox-row;
@@ -167,7 +148,7 @@ footer{
     bottom: 0;
     width: $width;
     text-align: center;
-    background-color: $purple;
+    background-color: $black;
     font-family: 'Prata', serif;
     padding: 1.2rem 0;
     font-size: 0.25rem;
@@ -209,7 +190,7 @@ footer{
                     margin: 0;
                 }
                 button:hover{
-                    background: rgb(19, 18, 18);
+                    background: rgb(71, 71, 71);
                 }
             }
             ul{
@@ -222,17 +203,6 @@ footer{
                         padding: 1.3em 0;
                     }
                 }
-            }
-        }
-    }
-    #gif-criteria{
-        @include flexbox-mobile;
-        width: 20em;
-        margin: 0 auto;
-        #gif-search{
-            margin-bottom: 1.5rem;
-            button{
-                padding: 0.65rem 0;
             }
         }
     }
@@ -276,6 +246,11 @@ footer{
         }
 
     }
+}
+@media (min-width: 572px){
+	.mobile-search{
+		display: none;
+	}
 }
 
 

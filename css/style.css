@@ -20,7 +20,7 @@ body {
 nav {
   display: flex;
   flex-direction: row;
-  background-color: #480575;
+  background-color: black;
   width: 100%;
   margin-bottom: 4em;
   align-items: baseline;
@@ -58,7 +58,6 @@ nav #menu #search-field {
 }
 
 nav #menu #search-field input {
-  display: none;
   border-color: white;
   font-family: 'Prata', serif;
   padding-left: 0.5rem;
@@ -90,43 +89,25 @@ nav #menu ul li a {
 }
 
 nav #menu ul li a:hover {
-  background: #131212;
-}
-
-.mobile-search {
-  display: none;
+  background: #474747;
 }
 
 #gif-criteria {
-  display: flex;
-  flex-direction: row;
-  width: 40em;
-  margin: 0 auto;
-  margin-bottom: 2.5rem;
   color: white;
+  width: 75%;
+  margin: 0 auto;
+  padding: 0.75rem;
 }
 
-#gif-criteria #gif-search, #gif-criteria #gif-items {
-  flex: 0 1 50%;
-  text-align: center;
+#gif-criteria div {
+  display: inline-block;
+  font-size: 45px;
+  font-weight: bolder;
 }
 
-#gif-criteria #gif-search div, #gif-criteria #gif-items div {
-  padding-bottom: 0.65rem;
-}
-
-#gif-criteria #gif-search button, #gif-criteria #gif-items button {
-  width: 80%;
-  padding: 0.45rem 0.25rem;
-  border: 3px outset #b56ddf;
-  border-radius: 7px;
-  font-family: 'Prata', serif;
-  color: black;
-  background-color: white;
-}
-
-#gif-criteria #gif-items button {
-  border: 1px outset #480575;
+#gif-criteria #gif-items {
+  color: #9b9999;
+  font-size: medium;
 }
 
 .insert-gifs {
@@ -157,7 +138,7 @@ footer {
   bottom: 0;
   width: 100%;
   text-align: center;
-  background-color: #480575;
+  background-color: black;
   font-family: 'Prata', serif;
   padding: 1.2rem 0;
   font-size: 0.25rem;
@@ -203,7 +184,7 @@ footer {
     margin: 0;
   }
   nav #menu #search-field button:hover {
-    background: #131212;
+    background: #474747;
   }
   nav #menu ul {
     display: flex;
@@ -214,18 +195,6 @@ footer {
   nav #menu ul li a {
     width: 100%;
     padding: 1.3em 0;
-  }
-  #gif-criteria {
-    display: flex;
-    flex-flow: column nowrap;
-    width: 20em;
-    margin: 0 auto;
-  }
-  #gif-criteria #gif-search, #gif-criteria #gif-items {
-    margin-bottom: 1.5rem;
-  }
-  #gif-criteria #gif-search button, #gif-criteria #gif-items button {
-    padding: 0.65rem 0;
   }
   .mobile-search {
     margin: 0 auto;
@@ -267,6 +236,12 @@ footer {
     max-width: 100%;
     padding: 0.75rem;
     max-height: 200px;
+  }
+}
+
+@media (min-width: 572px) {
+  .mobile-search {
+    display: none;
   }
 }
 /*# sourceMappingURL=style.css.map */
