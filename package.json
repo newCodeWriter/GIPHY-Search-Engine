@@ -1,0 +1,25 @@
+{
+  "name": "judge",
+  "version": "1.0.0",
+  "description": "Overview/Description",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/newCodeWriter/Project_02.git"
+  },
+  "author": "shay",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/newCodeWriter/Project_02/issues"
+  },
+  "homepage": "https://github.com/newCodeWriter/Project_02#readme",
+  "devDependencies": {
+    "eslint": "^7.19.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1"
+  }
+}
