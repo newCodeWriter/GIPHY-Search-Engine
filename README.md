@@ -1,4 +1,4 @@
-# Project_02 - Marshay Brown
+# GIPHY Search Engine
 
 npm init
 
